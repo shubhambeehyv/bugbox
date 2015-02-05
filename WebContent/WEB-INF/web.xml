@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" version="2.5">
+<welcome-file-list>
+	<welcome-file>
+		Login.html
+	</welcome-file>
+
+</welcome-file-list>
+<servlet>
+		<servlet-name>Http</servlet-name>
+		<servlet-class>java4s.HttpServ</servlet-class>
+</servlet>
+
+<servlet-mapping>
+		<servlet-name>Http</servlet-name>
+		<url-pattern>/userlist</url-pattern>
+</servlet-mapping>
+</web-app>
