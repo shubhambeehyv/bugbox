@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Add New Project</title>
+<script type="text/javascript">
+function addproject(){
+	document.getElementById("addProjectForm").submit();
+}
+</script>
+</head>
+
+ <body>
+        <div id = "newproject" style="background-color:#2E2E2E; color:white; margin:5px; padding:20px;border-radius: 5px;">
+
+Enter Project Details
+
+
+<form id= "addProjectForm"action = "addProject" method ="post">
+<p>
+Project Name:<br>
+<input type="text" name="projectname" style="border-radius:2px" ></p>
+    
+Description:
+</form>
+<textarea name ="projectdescription" form="addProjectForm"></textarea>  <br><br>
+<div id="addbutton" ><button onclick="addproject()">Add Project</button></div>
+
+<p id= "errorline"></p>
+
+
+ 
+</div>
+   
+
+</body>
+</html>

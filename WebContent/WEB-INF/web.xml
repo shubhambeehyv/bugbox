@@ -2,17 +2,83 @@
 <web-app xmlns="http://java.sun.com/xml/ns/javaee" version="2.5">
 <welcome-file-list>
 	<welcome-file>
-		Login.html
+		Login.jsp
 	</welcome-file>
 
 </welcome-file-list>
+
 <servlet>
-		<servlet-name>Http</servlet-name>
-		<servlet-class>java4s.HttpServ</servlet-class>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>com.beehyv.servlets.LoginServlet</servlet-class>
+</servlet>
+<servlet>
+		<servlet-name>Projects</servlet-name>
+		<servlet-class>com.beehyv.servlets.ProjectServlet</servlet-class>
+</servlet>
+<servlet>
+		<servlet-name>Releases</servlet-name>
+		<servlet-class>com.beehyv.servlets.ReleaseServlet</servlet-class>
+</servlet>
+<servlet>
+		<servlet-name>Logout</servlet-name>
+		<servlet-class>com.beehyv.servlets.LogoutServlet</servlet-class>
+</servlet>
+<servlet>
+		<servlet-name>AddUser</servlet-name>
+		<servlet-class>com.beehyv.servlets.NewUserServlet</servlet-class>
+</servlet>
+<servlet>
+		<servlet-name>AddProject</servlet-name>
+		<servlet-class>com.beehyv.servlets.NewProjectServlet</servlet-class>
+</servlet>
+<servlet>
+		<servlet-name>Issues</servlet-name>
+		<servlet-class>com.beehyv.servlets.IssueServlet</servlet-class>
+</servlet>
+<servlet>
+		<servlet-name>Comments</servlet-name>
+		<servlet-class>com.beehyv.servlets.CommentServlet</servlet-class>
 </servlet>
 
 <servlet-mapping>
-		<servlet-name>Http</servlet-name>
-		<url-pattern>/userlist</url-pattern>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/login</url-pattern>
 </servlet-mapping>
+<servlet-mapping>
+		<servlet-name>Projects</servlet-name>
+		<url-pattern>/projects</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+		<servlet-name>Releases</servlet-name>
+		<url-pattern>/releases</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+		<servlet-name>Logout</servlet-name>
+		<url-pattern>/logout</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+		<servlet-name>AddUser</servlet-name>
+		<url-pattern>/addUser</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+		<servlet-name>AddProject</servlet-name>
+		<url-pattern>/addProject</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+		<servlet-name>Issues</servlet-name>
+		<url-pattern>/issues</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+		<servlet-name>Comments</servlet-name>
+		<url-pattern>/comments</url-pattern>
+</servlet-mapping>
+<filter>
+		<filter-name>Auth</filter-name>
+		<filter-class>com.beehyv.filter.AuthenticationFilter</filter-class>
+</filter>
+<filter-mapping>
+		<filter-name>Auth</filter-name>
+		<url-pattern>/Projects.jsp</url-pattern>
+		<url-pattern>/Issues.jsp</url-pattern>
+</filter-mapping>
 </web-app>

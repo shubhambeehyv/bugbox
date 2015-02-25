@@ -1,0 +1,38 @@
+#login, #newuser {
+	background-color:#2E2E2E; color:white; margin-left:400px; margin-right:400px; margin-top:200px; margin-bottom:200px; padding:20px;border-radius: 5px;
+	
+}
+#newuser{
+	visibility:hidden;
+}
+.hide{
+	visibility:hidden;
+}
+#logout{
+	float: right;
+} 
+#header {
+    background-color:#E8DEC1;
+    color:#000071;
+    text-align:center;
+    padding:4px;
+    font-size: 35px;
+    display:inline;
+    
+    
+}
+.Project h1 {
+display:block;
+color: whitesmoke;
+margin-left : 20px;
+text-decoration: none;
+background-color:#1EA8A6;
+}
+.Description{
+margin-left:20px;
+background-color: white;
+}
+.Project  {
+margin-left : 70px;
+font-size : 20px;
+}
